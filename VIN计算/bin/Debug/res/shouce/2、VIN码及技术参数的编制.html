@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>VIN码及技术参数的编制yuan</title>
+
+    <LINK href="style.css" rel="stylesheet" media="screen">     <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]--> 
+    <LINK href="style.responsive.css" rel="stylesheet" media="all">   
+</head>
+<body>
+
+
+<h2 class="art-postheader">2、VIN码及技术参数的编制</h2>
+<BLOCKQUOTE>
+<P>VIN码共有17位，前8位需要编制，第9位为检验位，可通过程序计算得出，后8位为流水号，具体各位含义见《陕西汽车集团有限责任公司车辆识别代码（VIN）编制规则（SQB10023—2009）》。</P></BLOCKQUOTE>
+
+
+<h4>2.1、编辑EXCEL格式的装配计划：（目的为增加编制准确性1）</h4></br>
+<h5>2.1.1、调整单元格宽度、边框等，使所有单元格清晰可见。</h5></br>
+<div align="center"><img class="art-lightbox"  alt="编辑装配计划" src="2、VIN码及技术参数的编制/11.png"></div>
+<h5 align="center">图3.编辑装配计划</h5>
+<h4>2.2、复制信息：</h4></br>
+<h5>2.2.1、复制”出具车型”: </h5>
+</br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;如图，在“计划描述” 中，如果有“出具XXXXX合格证”，则“出具车型”单元格按出具车型复制，如果没有“出具”字样，则复制表头车型
+注意：车型后没有“整车”或“二类”“三类”字样，则默认按整车对待。</p></br>
+<h5>2.2.2、复制“出具发动机型号”： </h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;和“出具车型”一样，如果有“出具XXXXX合格证（XXX发动机）”，则“出具发动机型号”单元格按出具后的发动机型号复制，如果没有“出具”字样，则复制表头车型后发动机复制。</p></br>
+<BLOCKQUOTE>
+<P>注意：如果出具发动机型号和原发动机型号不一样，即为套牌车，“出具发动机型号”按“出具”字样后的发动机型号复制。出现这种情况，如果计划描述写有“发动机缸体号按“XXX”打印”，且此描述中型号和原发动机型号不同，就必须通知车间更改发动机缸体号。</P></BLOCKQUOTE>
+<h4>2.3、编制VIN码前8位：</h4></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;VIN码前8位的编制可分为以下情况：军车和民车，军车分为有协议车型和标配车，民车分为有公告车型和无公告车型。如下图：</p></br>
+<div align="center"><img class="art-lightbox"  alt="技术参数及VIN码前8位编制分类" src="2、VIN码及技术参数的编制/image007.png"></div>
+<h5 align="center">图4.技术参数及VIN码前8位编制分类</h5>
+<h5>2.3.1、军车Vin码前8位的编制: </h5></br></br>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;军车VIN码前8位编制按照《陕西汽车集团有限责任公司车辆识别代码（VIN）编制规则（SQB10023—2009）》，进行编制。</br>
+&nbsp;&nbsp;&nbsp;&nbsp;1、前3位：世界制造厂识别代号（WMI），陕汽全部为为“LZG”；</br></br>
+&nbsp;&nbsp;&nbsp;&nbsp;2、第4位：车辆类型及车辆品牌代码，出具车型是“整车”，为“J”； 出具车型是“二类”或“三类”等非完整车型，为“C”。例如“出具SX2190二类”，则该位为“C“，”出具 “SX4256NT384T整车”，该位为“J”，如果出具车型后未写明是整车或者二类，默认按整车对待，即该位为“J”。</br>
+</br>根据“质通-2013-48 号 关于车辆识别代码（VIN）编制的通知” 第二条：</p>
+<BLOCKQUOTE>
+
+<P>2、如需按 Q/SQ101101-2013《车辆识别代码（VIN）编制规则》编制 VIN 前 8 位时，牵引车按整车 VIN 前 8 位编制，其它载货类车
+（载货汽车、越野汽车、自卸汽车、专用汽车）编制整车 VIN 前 8位时，均按二类底盘 VIN 前 8 位编制，有认证要求的出口车 VIN 前8位按认证证书要求编制。</P></BLOCKQUOTE>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;即，除牵引车、有认证要求的出口车外，其他整车、二类都按整车编制。</BR></br>&nbsp;&nbsp;&nbsp;&nbsp;经过与质管部沟通，三类按三类编制。</p></br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3、 第5位：表示车辆最大设计总质量或客车长度代码。如果计划描述标明该车为“标配车”，则查看《特种车事业部军车技术参数表》，得到该车“最大设计总质量”，，如果不是，查看军协议或问设计，得到该车“最大设计总质量”，对照《陕西汽车集团有限责任公司车辆识别代码（VIN）编制规则（SQB10023—2009）》中的下表，得到该位字母。例如：出具车型为“SX2190”，查找协议，总质量为“19000KG”，对照表格，该位为“E”。
+</p></br>
+
+<TABLE align="center" class="art-article">
+
+    <tr >
+      <td  >代码</td>
+      <td  >驾驶室类型</td>
+      <td  >代码</td>
+      <td  >驾驶室类型</td>
+  </tr>
+    <tr >
+      <td >A</td>
+      <td >陕汽平头全金属四开门驾驶室、不可翻转。</td>
+      <td >U</td>
+      <td >斯太尔半高顶半长驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >B</td>
+      <td >斯太尔标准驾驶室、平头、可翻转。</td>
+      <td >T</td>
+      <td >斯太尔高顶半长驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >G</td>
+      <td >斯太尔高顶驾驶室、平头、可翻转。</td>
+      <td >P</td>
+      <td >偏置驾驶室系列。</td>
+    </tr>
+    <tr >
+      <td >M</td>
+      <td >斯太尔半高顶驾驶室、平头、可翻转。</td>
+      <td >S</td>
+      <td >德御标准驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >L</td>
+      <td >斯太尔加长驾驶室、平头、可翻转。</td>
+      <td >V</td>
+      <td >德御中长半高顶驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >E</td>
+      <td >湖北齐星平头驾驶室、可翻转。</td>
+      <td >W</td>
+      <td >曼F2000半加长高顶驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >F</td>
+      <td >湖北齐星平头、半高顶驾驶室、可翻转。</td>
+      <td >X</td>
+      <td >德御中长高顶驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >C</td>
+      <td >长头驾驶室、不可翻转。</td>
+      <td >Y</td>
+      <td >德御加长驾驶室、平头、可翻转。</td>
+    </tr>
+    <tr >
+      <td >H</td>
+      <td >曼F2000标准驾驶室、平头、可翻转。</td>
+      <td >4</td>
+      <td >F3000HX平头，可翻转驾驶室</td>
+    </tr>
+    <tr >
+      <td >J</td>
+      <td >曼F2000加长宽体驾驶室、平头、可翻转。</td>
+      <td >3</td>
+      <td >G3平头，可翻转驾驶室</td>
+    </tr>
+    <tr >
+      <td >K</td>
+      <td >曼F2000加长驾驶室、平头、可翻转。</td>
+      <td height="19" colspan="2">非完整车辆</td>
+    </tr>
+    <tr >
+      <td >N</td>
+      <td >曼F2000加长高顶宽体驾驶室、平头、可翻转。</td>
+      <td >2</td>
+      <td >二类车型</td>
+    </tr>
+    <tr >
+      <td >D</td>
+      <td >曼F2000半加长宽体驾驶室、平头、可翻转。</td>
+      <td >3</td>
+      <td >三类车型</td>
+    </tr>
+</table>
+<h5 align="center">图6.驾驶室参数对应表</h5>
+<p>        &nbsp;&nbsp;&nbsp;&nbsp;出具车型是“二类”，该位为“2”，表示“该车为二类非完整车型”；</br>
+&nbsp;&nbsp;&nbsp;&nbsp;出具车型是“三类”，该位为“3”，表示“该车为三类非完整车型”；</p></br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;第7位：该位表示发动机功率，与物料编码中对应的发动机功率位对应，例如：物料编码为“S2190LM345WB9J14J”，则该位为“M”，表示“发动机额定功率在199~213KW之间”，如下表：</p>
+        <table align="center" class="art-article">
+          <tr >
+            <td  >代码</td>
+            <td  >发动机类型（kw/ps参考）</td>
+            <td  >代码</td>
+            <td  >发动机类型（kw/ps参考）</td>
+            <td  >代码</td>
+            <td  >发动机类型（kw/ps参考）</td>
+          </tr>
+          <tr >
+            <td  >A</td>
+            <td  >≤51</td>
+            <td  >P</td>
+            <td  >229~243/311~331</td>
+            <td  ><p>9</p>            </td>
+            <td  >V型柴油机（147~450）kw </td>
+          </tr>
+          <tr >
+            <td  >B<br /></td>
+            <td  >52~66 </td>
+            <td  >R</td>
+            <td  >244~257/332~350</td>
+            <td  >8</td>
+            <td  >天然气发动机、液化石油发动机、二甲醚燃料发动机（25~316）kw</td>
+          </tr>
+          <tr >
+            <td  >C<br /></td>
+            <td  >67~81 </td>
+            <td  >S</td>
+            <td  >258~272/351~370 </td>
+            <td  >7</td>
+            <td  >汽油发动机（25~195）kw </td>
+          </tr>
+          <tr >
+            <td  >D</td>
+            <td  >82~96</td>
+            <td  >T</td>
+            <td  >273~287/371~390</td>
+            <td  >6</td>
+            <td  >天然气、柴油双燃料发动机100~316）kw</td>
+          </tr>
+          <tr >
+            <td  >E</td>
+            <td  >97~110</td>
+            <td  >U</td>
+            <td  >288~301/391~410 </td>
+            <td  >5</td>
+            <td  >柴油机、电动机复合动力（100~316）kw</td>
+          </tr>
+          <tr >
+            <td  >F</td>
+            <td  >111~125 </td>
+            <td  >V</td>
+            <td  >302~316/411~430</td>
+            <td  >4</td>
+            <td  >电动机（100~240）kw</td>
+          </tr>
+          <tr >
+            <td  >G</td>
+            <td  >126~140/171~191 </td>
+            <td  >W</td>
+            <td  >317~331/431~450</td>
+            <td colspan="2" rowspan="6"  >&nbsp;</td>
+          </tr>
+          <tr >
+            <td  >H</td>
+            <td  >141~154192~210</td>
+            <td  >X</td>
+            <td  >332~350KW直列六缸柴油机</td>
+          </tr>
+          <tr >
+            <td  >J</td>
+            <td  >155~169/211~230 </td>
+            <td  >Y</td>
+            <td  >351~370KW直列六缸柴油机</td>
+          </tr>
+          <tr >
+            <td  >L</td>
+            <td  >170~184/231~251</td>
+            <td  >Z</td>
+            <td  >＞370KW直列六缸柴油机</td>
+          </tr>
+          <tr >
+            <td  >M </td>
+            <td  >185~198/252~270 </td>
+            <td colspan="2" rowspan="2"  >&nbsp;</td>
+          </tr>
+          <tr >
+            <td  >N</td>
+            <td  >199~213/271~290</td>
+          </tr>
+        </table>
+         <h5 align="center">图7.功率参数对应表</h5>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;4、第8位：该位表示驱动型式，与物料编码中对应的驱动型式位对应，例如：物料编码为“S2190LM345WB9J14J”，则该位为“5”，表示“驱动型式为6×6”，如下表</p>
+        <p>&nbsp;</p>
+        </br>
+        <TABLE align="center" class="art-article">
+
+    <tr >
+      <td  >代码</td>
+      <td  >驱动型式</td>
+      <td  >代码</td>
+      <td  >驱动型式</td>
+      <td  >代码</td>
+      <td  >驱动型式</td>
+      <td  >代码</td>
+      <td  >驱动型式</td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">1</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">4×2</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">6</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">8</span>×<span lang="EN-US" xml:lang="EN-US">4</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">B</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">8</span>×<span lang="EN-US" xml:lang="EN-US">2</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">G</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">12</span>×<span lang="EN-US" xml:lang="EN-US">4</span></p></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">2</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">4×4</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">7</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">8</span>×<span lang="EN-US" xml:lang="EN-US">8</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">C</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">10</span>×<span lang="EN-US" xml:lang="EN-US">4</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">H</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">12</span>×<span lang="EN-US" xml:lang="EN-US">6</span></p></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">3</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">6×2</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">8</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">10</span>×<span lang="EN-US" xml:lang="EN-US">10</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">D</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">10</span>×<span lang="EN-US" xml:lang="EN-US">6</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">J</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">12</span>×<span lang="EN-US" xml:lang="EN-US">8</span></p></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">4</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">6×4</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">9</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">6</span>×<span lang="EN-US" xml:lang="EN-US">2</span>（双前轴）<span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">E</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">10</span>×<span lang="EN-US" xml:lang="EN-US">8</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">K</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">12</span>×<span lang="EN-US" xml:lang="EN-US">10</span></p></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">5</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">6</span>×<span lang="EN-US" xml:lang="EN-US">6</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">A</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">8</span>×<span lang="EN-US" xml:lang="EN-US">6</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">F</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><span lang="EN-US" xml:lang="EN-US">12</span>×<span lang="EN-US" xml:lang="EN-US">12</span></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">L</span></strong></p></td>
+      <td nowrap="nowrap" valign="bottom"><p align="center">备用</p></td>
+    </tr>
+</table>
+        
+      <h5 align="center">图8.驱动参数对应表</h5>
+      
+    <h5> 2.3.2、民车Vin码前8位的编制: </h5></br></br> 
+      
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;1、无公告车型的编制，基本同军车，也是询问设计或者查询设计文件，获得“最大设计总质量”，逐位编制前8位。</br>
+&nbsp;&nbsp;&nbsp;&nbsp;2、有公告车型，查看公告，获得VIN码前8位，以“出具车型SX4257NT279，发动机型号WP10.336N”为例，步骤如下：</p></br>
+<div align="center"><img class="art-lightbox"  alt="公告查询系统" src="2、VIN码及技术参数的编制/gg.PNG" /></div>
+<h5 align="center">图9.公告查询系统</h5>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;a.打开公告网，地址：http://172.20.2.100:8086/  ，用户名：31288，密码：203219,。（验证码不分大小写，此网址技术支持电话：86955309）</br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;b.在“车辆型号”右侧文本框中输入车型“SX4257NT279”，点击”整车查询“</p>
+
+<div align="center"><img class="art-lightbox"  alt="公告参数输入界面" src="2、VIN码及技术参数的编制/gg2.PNG" /></div>
+<h5 align="center">图10.公告参数输入界面</h5>
+<div align="center"><img src="2、VIN码及技术参数的编制/image015.png"  alt="车型列表" width="800" height="215" class="art-lightbox" /></div>
+<h5 align="center">图11.车型列表</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;c.在出现的列表栏中点击“车辆型号”中的“SX4257NT279”，即出现“汽车产品整车技术参数”页。</p>
+<div align="center"><img class="art-lightbox"  alt="汽车产品整车技术参数页" src="2、VIN码及技术参数的编制/gg4.PNG"></div>
+<h5 align="center">图12. 汽车产品整车技术参数页</h5>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;d.该车因为有多款发动机，对应Vin码前8位有两个，查看备注栏，可找到WP10.336N发动机对应的Vin码前8位为“LZGJLNR9”。</p>
+<BLOCKQUOTE>
+
+<P>注意：自卸车整车备注栏中可能未标出“Vin码前8位”，需点击“底盘信息”下的“底盘1”（或者底盘2、3等），即可出现有“Vin码前8位”的备注栏。</P></BLOCKQUOTE>
+<h4>2.4、计算全部17位VIN码</h4></br>
+
+<h5>2.4.1、导入信息：</h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;打开Vin码计算程序，找到<img src="2、VIN码及技术参数的编制/image019.png" alt="导入模板" width="144" height="34" />，将要计算的Vin按格式复制进模板（去掉全部格式，如字体颜色，底色，加粗等）。</p>
+<div align="center"><img class="art-lightbox"  alt="VIN计算程序导入模板" src="2、VIN码及技术参数的编制/image021.png"></div>
+<h5 align="center">图13.VIN计算程序导入模板</h5>
+
+
+<BLOCKQUOTE>
+
+<P>注意：使用Vin码计算程序，操作系统必须安装NET FRAME3.0或以上版本（WINOWS7以上操作系统已经自带，WINDOWS XP需安装）</P></BLOCKQUOTE>
+
+
+<h5>2.4.2、计算VIN码：</h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;a、打开<img src="2、VIN码及技术参数的编制/VIn.PNG" alt="VIN计算程序" width="105" height="21" />，进入如下界面：</p></br>
+
+<div align="center"><img src="2、VIN码及技术参数的编制/jm.PNG"  alt="软件界面" width="713" height="557" class="art-lightbox"></div>
+<h5 align="center">图14. 软件界面</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;b、点击<img src="2、VIN码及技术参数的编制/impo.PNG" alt="导入" />，在“请选择VIN码带入文件”对话框中选择“vin计算导入模板.xls”，点击“打开”。</p>
+<div align="center"><img src="2、VIN码及技术参数的编制/dele.PNG"  alt="删除多余行" width="713" height="557"  class="art-lightbox"></div>
+<h5 align="center">图15. 删除多余行</h5>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;c、检查错误：请检查是否有错误选项，并进行更改</p>
+<div align="center"><img src="2、VIN码及技术参数的编制/mistake.png"  alt="错误提示" width="514" height="239"  class="art-lightbox"></div>
+<h5 align="center">图16. 错误提示 </h5>
+<BLOCKQUOTE>
+
+<P>注意：错误检测可以对车型，VIN码前8位，流水号机型规则检测，但不要过于依赖错误检测，尽量一次编制正确。</P></BLOCKQUOTE>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;d、计算：点击<img src="2、VIN码及技术参数的编制/cal.PNG" alt="计算" width="60" height="53" />，计算好的VIN码将会出现在右侧表格区域中：</p>
+<div align="center"><img src="2、VIN码及技术参数的编制/result.PNG"  alt="计算结果" width="711" height="541"  class="art-lightbox"></div>
+<h5 align="center">图17. 计算结果</h5>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;e、导出：点击<img src="2、VIN码及技术参数的编制/imp1.PNG" alt="导出excel" />，可导出EXCEL格式的VIN码：</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击<img src="2、VIN码及技术参数的编制/MES.PNG" alt="导出MES" />，可导出MES要求格式的VIN码。</p>
+
+<h4>2.6、技术参数的编制：</h4></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;d技术参数的的编制和VIN码一样，如图18，也可分为以下情况：军车和民车，军车分为有协议车型和标配车，民车分为有公告车型和无公告车型。此外，还分为出口车外文整车标牌和中文整车标牌车型。</p>
+<div align="center"><img src="2、VIN码及技术参数的编制/canshu.png"  alt="技术参数表" width="676" height="169"  class="art-lightbox" /></div>
+<h5 align="center">图18. 技术参数表</h5>
+<p>编制方法如下：</p></br>
+<h5>2.6.1、复制信息</h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;从本手册2.1中编辑好的装配计划中，复制“车型型号”、“发动机型号”、“流水号”到技术参数表模板（可用上一个装配计划参数表修改得到）相应位置。</p>
+
+
+
+<h5>2.6.2、总质量：</h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;民车，查看公告，如果无公告，询问设计。</br>&nbsp;&nbsp;&nbsp;&nbsp;
+军车，查看协议，如果无协议，标配查《特种车事业部军车技术参数表》，不是标配，询问设计。</p>
+
+
+<h5>2.6.3、额定载质量：</h5></br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;如果计划描述有“英文标牌”字样，且非牵引车，需填写此项，其他车型无需填写。如果民车公告无此参数，询问设计；军车协议没有此参数，由总质量减整备质量得到，如果没有协议，非标配，询问设计。</p>
+
+<h5>2.6.4、整备质量：</h5></br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;民车，查看公告，如果无公告，询问设计。</br>&nbsp;&nbsp;&nbsp;&nbsp;
+军车，查看协议，协议如果没有或无协议，标配查《特种车事业部军车技术参数表》，不是标配，询问设计。</p>
+<h5>2.6.5、准拖挂车总质量：</h5></br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;此参数牵引车填写，其他车型不用填写。</br>&nbsp;&nbsp;&nbsp;&nbsp;
+民车，看计划描述，计划描述无，或者计划描述与公告不符，询问设计。</br>&nbsp;&nbsp;&nbsp;&nbsp;
+军车，查看协议，协议如果没有或无协议，标配查《特种车事业部军车技术参数表》，不是标配，询问设计。</p>
+
+
+<h5>2.6.6、半挂车鞍座最大允许承载质量：：</h5></br>
+<div align="center"><img src="2、VIN码及技术参数的编制/image047.png"  alt="人数对应表" width="422" height="215"  class="art-lightbox" /></div>
+<h5 align="center">图19. 人数对应表</h5>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;此参数牵引车填写，其他车型不用填写。民车，看计划描述中“准乘人数”，此人数与公告“前排载客对应”， 如图21，如果计划描述“准乘人数”为2人，则半挂车鞍座最大允许承载质量17570kg,如果为3人，则半挂车鞍座最大允许承载质量17505kg。(计算方法：半挂车鞍座最大允许承载质量=最大设计总质量-整备质量-65（一个人的质量）*准乘人数)</br>&nbsp;&nbsp;&nbsp;&nbsp;
+军车，查看协议，协议如果没有或无协议，标配查《特种车事业部军车技术参数表》，不是标配，询问设计。</p>
+<h5>2.6.7发动机型号：</h5></br>
+<p>此参数由2.6.1复制得到。</p></br>
+<h5>2.6.8、发动机净功率：</h5>
+<div align="center"><img src="2、VIN码及技术参数的编制/image049.png"  alt="发动机净功率" width="554" height="96"  class="art-lightbox" /></div>
+<h5 align="center">图20. 备注栏的“最大净功率”</h5>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;民车，查看公告备注栏，如果无公告，查看《发动机型号 功率对照表》;</br>&nbsp;&nbsp;&nbsp;&nbsp;
+军车，查看《军车发动机型号、马力、额定功率、最大净功率对照表》，如果无此发动机型号，联系潍柴 刘洪震：18660616365或军研 王朝广8695546</p>
+
+<h5>2.6.9、发动机排量：</h5>
+
+。
+<p>&nbsp;&nbsp;&nbsp;&nbsp;军车无需填写;</br>&nbsp;&nbsp;&nbsp;&nbsp;
+民车，查看公告，如果无公告，询问设计。</p>
+<div align="center"></div>
+<h5 align="center"><img src="2、VIN码及技术参数的编制/image051.png"  alt="发动机排量" width="554" height="87"  class="art-lightbox" /></h5>
+<h5 align="center">图21. 公告中的“发动机参数”</h5>
+<BLOCKQUOTE>
+
+<P>注意：公告发动机排量单位为mL，技术参数表为L，需除1000。例如11596mL=11.596L。</P></BLOCKQUOTE>
+<h5>2.6.10、驱动型式：</h5>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;此参数由2.6.1复制得到。</p>
+<h5>2.6.11、流水号：</h5>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;此参数由2.6.1复制得到。</br>&nbsp;&nbsp;&nbsp;&nbsp;至此，技术参数编制结束。</p>
+
+
+
+
+
+
+
+ 
+
+</body>
+
+</html>
